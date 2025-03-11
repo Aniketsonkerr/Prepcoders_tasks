@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <nav className="flex flex-row justify-between items-center  text-black  md:px-32 bg-white drop-shadow-md">
-        <Link>
+        <Link to={"/"}>
           <img
             src="https://brandlogos.net/wp-content/uploads/2020/03/Adidas-logo-512x512.png"
             alt="logo"
@@ -15,7 +15,7 @@ function Header() {
         </Link>
 
         <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">
-          <Link>
+          <Link to={"/"}>
             <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all">
               Home
             </li>
