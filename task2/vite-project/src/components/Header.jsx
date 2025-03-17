@@ -25,7 +25,7 @@ function Header() {
               About
             </li>
           </Link>
-          <Link>
+          <Link to={"/products"}>
             <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all">
               Product
             </li>
