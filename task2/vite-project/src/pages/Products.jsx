@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ClientLogos from "../components/Clientlogos";
 
 const products = [
   {
@@ -38,22 +39,25 @@ function Products() {
   };
 
   return (
-    <div className="container p-5">
-      <Slider {...settings}>
-        {products.map((product) => (
-          <div key={product.id} className="d-flex justify-content-center">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={product.img} alt={product.title} />
-              <Card.Body>
-                <Card.Title>{product.title}</Card.Title>
-                <Card.Text>{product.text}</Card.Text>
-                <Button variant="primary">Buy Now</Button>
-              </Card.Body>
-            </Card>
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <>
+      <div className="container p-5">
+        <Slider {...settings}>
+          {products.map((product) => (
+            <div key={product.id} className="d-flex justify-content-center">
+              <Card style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={product.img} alt={product.title} />
+                <Card.Body>
+                  <Card.Title>{product.title}</Card.Title>
+                  <Card.Text>{product.text}</Card.Text>
+                  <Button variant="primary">Buy Now</Button>
+                </Card.Body>
+              </Card>
+            </div>
+          ))}
+        </Slider>
+      </div>
+      <ClientLogos className="w-full" />
+    </>
   );
 }
 
